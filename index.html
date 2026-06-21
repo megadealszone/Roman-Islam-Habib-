@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Download List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER (loaded from header.html) -->
+<div id="site-header"></div>
+<script>
+    (function loadHeader(){
+        fetch('header.html')
+            .then(function(resp){ if(!resp.ok) throw new Error('Header load failed'); return resp.text(); })
+            .then(function(html){ document.getElementById('site-header').innerHTML = html; })
+            .catch(function(err){ console.error(err); });
+    })();
+</script>
+
+<!-- MAIN -->
+<main>
+
+<div class="container" id="software-list">
+
+    <!-- SEARCH -->
+    <input type="text" id="searchInput" class="search-box"
+        placeholder="🔍 সফটওয়্যার খুঁজুন..." onkeyup="searchTable()">
+
+    <!-- SCROLL TABLE WRAPPER -->
+    <div class="table-container">
+
+        <table id="softwareTable">
+
+            <thead>
+                <tr>
+                    <th>Serial</th>
+                    <th>Software Name</th>
+                    <th>Version</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Adobe Photoshop</td>
+                    <td>CS8</td>
+                    <td><button class="btn" onclick="openModal('link1')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Adobe Photoshop</td>
+                    <td>2020</td>
+                    <td><button class="btn" onclick="openModal('link2')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>KM Player</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link3')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Bijoy Bayanno</td>
+                    <td>Latest</td>
+                    <td><button class="btn" onclick="openModal('link4')">Download</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Microsoft Office</td>
+                    <td>2019</td>
+                    <td><button class="btn" onclick="openModal('link5')">Download</button></td>
+                </tr>
+
+                <!-- 🔥 এখানে যত খুশি row যোগ করো (25+ হলে auto scroll হবে) -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</main>
+
+<!-- CONTACT -->
+<div id="site-contact"></div>
+<script>
+    (function loadContact(){
+        fetch('contact.html')
+            .then(function(resp){ if(!resp.ok) throw new Error('Contact load failed'); return resp.text(); })
+            .then(function(html){ document.getElementById('site-contact').innerHTML = html; })
+            .catch(function(err){ console.error(err); });
+    })();
+</script>
+
+<!-- FOOTER -->
+<div id="site-footer"></div>
+<script>
+    (function loadFooter(){
+        fetch('footer.html')
+            .then(function(resp){ if(!resp.ok) throw new Error('Footer load failed'); return resp.text(); })
+            .then(function(html){ document.getElementById('site-footer').innerHTML = html; })
+            .catch(function(err){ console.error(err); });
+    })();
+</script>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <h3>🔒 Password দিন</h3>
+        <input type="password" id="password" placeholder="Enter Password">
+        <br><br>
+        <button class="btn" onclick="checkPassword()">Submit</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
